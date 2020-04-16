@@ -1,0 +1,63 @@
+
+<!--{{productForm.value | json}}-->
+
+<form [formGroup]="productForm">
+
+<div class="product-wrapper" *ngFor="let storeData of prouctsData">
+  <div class="right-content">
+    <h3 class="heaing">
+    Product: {{storeData.product_name}}
+    </h3>
+    <div>
+      <p class="description">
+        Brand: {{storeData.brand_name}}
+      </p>
+      <p class="quantity">
+        Quantity: {{storeData.quantity}}
+
+      </p>
+      <p class="mrp">
+       MRP: {{storeData.mrf}}
+
+      </p>
+      <p class="selling-price">
+        Price:{{storeData.price}} Rs
+
+      </p>
+    </div>
+    <div class="btn-wapper">
+      <button class="btn"  (click)="submitData(storeData)">-->
+                  ADD TO CART
+                </button>
+      <div class="product-quantity">
+        <span class="decbutton minus"><img src="assets/img/icons/minus.svg" class="svg" alt=""></span>
+        <input type="text" min="1" value="{{storeData.quantity}}" class="product-quantity-list counter">
+        <span class="incbutton plus"><img src="assets/img/icons/plus.svg" class="svg" alt=""></span>
+      </div>
+<!--      <div>-->
+
+<!--        <div class="incbutton" (click)="addCounter($event)">+</div>-->
+<!--        <div class="counter">-->
+<!--          <input class="counter" formControlName="counter" type="number" [(ngModel)]="storeData.num" min="1" value="num"  (ngModelChange)="modelChanged($event)"/>-->
+<!--        </div>-->
+<!--        <div class="decbutton">-</div>-->
+<!--      </div>-->
+
+<!--      <div>-->
+<!--        <button (click)="addProductToCart(storeData)" >+</button>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <button >-</button>-->
+<!--      </div>-->
+    </div>
+  </div>
+  <div class="left-content">
+    <div class="inner-container">
+      <div class="img-container">
+        <img src="{{storeData.url}}" alt="prouct">
+      </div>
+      <p>{{storeData.offer}} off</p>
+    </div>
+  </div>
+</div>
+</form>

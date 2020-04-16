@@ -1,0 +1,19 @@
+
+<div class="product-wrapper" *ngIf="products">
+  <h5>ITEM ADDED</h5>
+  <div class="right-content">
+    <h3 class="heaing">
+     Product: {{products.product_name}}
+    </h3>
+    <p>
+      Price: {{products.price}}
+    </p>
+    <p>
+      Quantity: {{products.quantity}}
+    </p>
+    <h4>Total:₹{{products.price*(products.quantity?products.quantity:1)}}
+    </h4>
+
+    </div>
+
+    </div>

@@ -1,0 +1,25 @@
+<div class="app-container">
+  <div class="app-container-inner">
+    <header>
+      <div class="header-section">
+        Shopping
+      </div>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="left-section">
+          <p class="content">Qty</p>
+          <p class="content">Total</p>
+        </div>
+        <div class="right-section">
+          <button class="btn btn-green" (click)="openModal()">CHECKOUT</button>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
